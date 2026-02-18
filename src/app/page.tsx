@@ -25,7 +25,8 @@ export default function Home() {
 
       {/* Hero Section */}
       <HeroSection
-        backgroundImage={heroImageDesktop.src}
+        backgroundImageMobile={heroImageMobile.src}
+        backgroundImageDesktop={heroImageDesktop.src}
         title="JUNE FORTH"
         subtitle="Discover premium sportswear designed for those who run their own race."
         scriptureRef="HABAKKUK 2:2"

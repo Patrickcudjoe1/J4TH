@@ -3,7 +3,9 @@
 import React from 'react';
 
 interface HeroProps {
-    backgroundImage: string;
+    backgroundImageMobile?: string;
+    backgroundImageDesktop?: string;
+    backgroundImage?: string;
     title: string;
     subtitle: string;
     scriptureText?: string;
@@ -12,6 +14,8 @@ interface HeroProps {
 }
 
 export const HeroSection: React.FC<HeroProps> = ({
+    backgroundImageMobile,
+    backgroundImageDesktop,
     backgroundImage,
     title,
     subtitle,
@@ -19,13 +23,25 @@ export const HeroSection: React.FC<HeroProps> = ({
     scriptureRef,
     thumbnailImage,
 }) => {
+    // Use separate mobile/desktop images if provided, otherwise fall back to single image
+    const mobileImage = backgroundImageMobile || backgroundImage;
+    const desktopImage = backgroundImageDesktop || backgroundImage;
+
     return (
         <div className="h-screen w-full overflow-hidden relative flex-shrink-0">
-            {/* Background Image */}
+            {/* Mobile Background Image */}
             <div
-                className="absolute inset-0 bg-cover bg-center"
+                className="absolute inset-0 md:hidden bg-cover bg-center"
                 style={{
-                    backgroundImage: `url('${backgroundImage}')`,
+                    backgroundImage: `url('${mobileImage}')`,
+                    filter: 'contrast(1.05) brightness(0.98)',
+                }}
+            />
+            {/* Desktop Background Image */}
+            <div
+                className="hidden md:block absolute inset-0 bg-cover bg-center"
+                style={{
+                    backgroundImage: `url('${desktopImage}')`,
                     filter: 'contrast(1.02) brightness(0.95)',
                 }}
             />

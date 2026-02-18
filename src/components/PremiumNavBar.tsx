@@ -80,8 +80,8 @@ export const PremiumNavBar: React.FC<PremiumNavBarProps> = ({
                 className={`fixed top-0 left-0 right-0 w-full z-[60] transition-all duration-300 ${bgColor} ${scrolled ? 'shadow-md' : 'shadow-none'
                     }`}
             >
-                <div className="max-w-full px-4 sm:px-6 md:px-12 py-3 md:py-4">
-                    <div className="flex items-center justify-between h-12 md:h-14 relative">
+                <div className="max-w-full px-4 sm:px-6 md:px-12 py-2 md:py-2.5">
+                    <div className="flex items-center justify-between h-10 md:h-12 relative">
                         {/* LEFT - DESKTOP MENU */}
                         <div className="hidden md:flex items-center gap-10">
                             {menuItems.map((item) => (
