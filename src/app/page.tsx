@@ -4,7 +4,7 @@ import PremiumNavBar from '@/components/PremiumNavBar';
 import HeroSection from '@/components/HeroSection';
 import SplitPromo from '@/components/SplitPromo';
 import CategoryGrid from '@/components/CategoryGrid';
-import heroImageMobile from '@/assets/J4-12.jpg';
+import heroImageMobile from '@/assets/J4-8.png';
 import heroImageDesktop from '@/assets/J4-8.png';
 import promoLeftImage from '@/assets/J4-9.jpg';
 import promoRightImage from '@/assets/J4-13.jpg';
@@ -28,7 +28,7 @@ export default function Home() {
         backgroundImageMobile={heroImageMobile.src}
         backgroundImageDesktop={heroImageDesktop.src}
         title="JUNE FORTH*"
-        subtitle="FAITH DRIVEN PREMIUM."
+        subtitle="faith driven premium wear."
         scriptureRef="HABAKKUK 2:2"
         scriptureText="AND THE LORD ANSWERED ME AND SAID WRITE THE VISION AND MAKE IT PLAIN, THAT HE MAY RUN THAT READETH IT..."
         thumbnailImage={heroImageMobile.src}

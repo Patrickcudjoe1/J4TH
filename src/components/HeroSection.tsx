@@ -23,13 +23,19 @@ export const HeroSection: React.FC<HeroProps> = ({
     scriptureRef,
     thumbnailImage,
 }) => {
-    // Use separate mobile/desktop images if provided, otherwise fall back to single image
+    // Fallback logic for responsive backgrounds
     const mobileImage = backgroundImageMobile || backgroundImage;
     const desktopImage = backgroundImageDesktop || backgroundImage;
 
+    // Safer title split (prevents crash if only one word)
+    const titleParts = title.split(' ');
+    const firstWord = titleParts[0];
+    const secondWord = titleParts[1] || '';
+
     return (
         <div className="h-screen w-full overflow-hidden relative flex-shrink-0">
-            {/* Mobile Background Image */}
+
+            {/* Mobile Background */}
             <div
                 className="absolute inset-0 md:hidden bg-cover bg-center"
                 style={{
@@ -37,7 +43,8 @@ export const HeroSection: React.FC<HeroProps> = ({
                     filter: 'contrast(1.05) brightness(0.98)',
                 }}
             />
-            {/* Desktop Background Image */}
+
+            {/* Desktop Background */}
             <div
                 className="hidden md:block absolute inset-0 bg-cover bg-center"
                 style={{
@@ -50,27 +57,75 @@ export const HeroSection: React.FC<HeroProps> = ({
             <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
 
             {/* Content Container */}
-            <div className="relative h-full flex items-center justify-between px-8 md:px-16">
+            <div className="relative h-full flex items-center justify-between px-6 md:px-16">
+
                 {/* Left Side - Headline */}
-                <div className="mt-20 md:mt-0 z-10 flex-1">
+                <div className="mt-20 md:mt-0 z-10 flex-1 pr-24 md:pr-0">
                     <h1 className="text-white uppercase leading-[0.85] tracking-tighter">
-                        <div className="text-[clamp(3rem,12vw,9rem)] font-black">{title.split(' ')[0]}</div>
-                        <div className="text-[clamp(3rem,12vw,9rem)] font-black">{title.split(' ')[1]}</div>
+                        <div className="text-[clamp(3rem,12vw,9rem)] font-black">
+                            {firstWord}
+                        </div>
+                        {secondWord && (
+                            <div className="text-[clamp(3rem,12vw,9rem)] font-black">
+                                {secondWord}
+                            </div>
+                        )}
                     </h1>
-                    <p className="text-white/80 mt-6 max-w-sm text-sm md:text-base">{subtitle}</p>
+
+                    <p className="text-white/80 mt-6 max-w-sm text-sm md:text-base">
+                        {subtitle}
+                    </p>
                 </div>
 
-                {/* Right Side - Card */}
+                {/* Mobile Scripture Card */}
                 {scriptureText && (
-                    <div className="hidden md:flex absolute bottom-12 right-12 z-10 items-end gap-4">
+                    <div className="md:hidden absolute bottom-6 right-6 z-10 flex flex-col items-end gap-2 max-w-[160px]">
+
                         {/* Text Block */}
-                        <div className="text-white text-xs uppercase leading-relaxed max-w-[200px]">
-                            <span className="text-[#E07E3F] font-bold">{scriptureRef}</span>
+                        <div className="text-white text-[10px] uppercase leading-relaxed text-right">
+                            <span className="text-[#E07E3F] font-bold">
+                                {scriptureRef}
+                            </span>
                             <br />
                             {scriptureText}
                         </div>
 
                         {/* Thumbnail Image */}
+                        {thumbnailImage && (
+                            <div className="relative">
+                                <div className="w-28 h-36 bg-gray-900 overflow-hidden shadow-lg">
+                                    <img
+                                        src={thumbnailImage}
+                                        alt="Thumbnail"
+                                        className="h-full w-full object-cover grayscale"
+                                    />
+                                </div>
+                                <div className="text-white text-[10px] mt-1 text-right">
+                                    06 / 04
+                                </div>
+                            </div>
+                        )}
+
+                    </div>
+                )}
+
+
+                {/* ===================== */}
+                {/* Desktop Scripture Card */}
+                {/* ===================== */}
+                {scriptureText && (
+                    <div className="hidden md:flex absolute bottom-12 right-12 z-10 items-end gap-4">
+
+                        {/* Text Block */}
+                        <div className="text-white text-xs uppercase leading-relaxed max-w-[200px]">
+                            <span className="text-[#E07E3F] font-bold">
+                                {scriptureRef}
+                            </span>
+                            <br />
+                            {scriptureText}
+                        </div>
+
+                        {/* Desktop Thumbnail */}
                         {thumbnailImage && (
                             <div className="relative">
                                 <div className="w-40 h-48 bg-gray-900 overflow-hidden">
@@ -80,11 +135,14 @@ export const HeroSection: React.FC<HeroProps> = ({
                                         className="h-full w-full object-cover grayscale"
                                     />
                                 </div>
-                                <div className="text-white text-xs mt-2">06 / 04</div>
+                                <div className="text-white text-xs mt-2">
+                                    06 / 04
+                                </div>
                             </div>
                         )}
                     </div>
                 )}
+
             </div>
         </div>
     );
