@@ -48,28 +48,28 @@ export const PremiumNavBar: React.FC<PremiumNavBarProps> = ({
 
     const menuItems = [
         {
-            label: 'FEATURED',
-            id: 'featured',
-            subItems: [
-                { label: 'CAPS', href: '#' },
-                { label: 'TOTE BAGS', href: '#' },
-            ],
+            label: 'HOME',
+            id: 'home',
+            // subItems: [
+            //     { label: 'CAPS', href: '#' },
+            //     { label: 'TOTE BAGS', href: '#' },
+            // ],
         },
         {
-            label: 'COLLECTIONS',
+            label: 'CATALOG',
             id: 'collections',
-            subItems: [
-                { label: 'PRESENCE', href: '#' },
-                { label: 'TRINITY', href: '#' },
-            ],
+            // subItems: [
+            //     { label: 'PRESENCE', href: '#' },
+            //     { label: 'TRINITY', href: '#' },
+            // ],
         },
         {
-            label: 'NEW ARRIVALS',
-            id: 'newArrivals',
-            subItems: [
-                { label: 'HOODIES', href: '#' },
-                { label: 'JERSEYS', href: '#' },
-            ],
+            label: 'GALLERY',
+            id: 'gallery',
+            // subItems: [
+            //     { label: 'HOODIES', href: '#' },
+            //     { label: 'JERSEYS', href: '#' },
+            // ],
         },
     ];
 
@@ -112,7 +112,7 @@ export const PremiumNavBar: React.FC<PremiumNavBarProps> = ({
                       ${scrolled ? 'bg-white/90 text-black' : 'bg-black/80 text-white'}
                     `}
                                     >
-                                        <div className="flex flex-col px-4 py-3 space-y-3">
+                                        {/* <div className="flex flex-col px-4 py-3 space-y-3">
                                             {item.subItems.map((subItem) => (
                                                 <a
                                                     key={subItem.label}
@@ -122,7 +122,7 @@ export const PremiumNavBar: React.FC<PremiumNavBarProps> = ({
                                                     {subItem.label}
                                                 </a>
                                             ))}
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             ))}
@@ -266,7 +266,7 @@ export const PremiumNavBar: React.FC<PremiumNavBarProps> = ({
                                             transition={{ duration: 0.2 }}
                                             className="overflow-hidden"
                                         >
-                                            <div className="pl-4 pb-2 space-y-2 bg-gray-50">
+                                            {/* <div className="pl-4 pb-2 space-y-2 bg-gray-50">
                                                 {item.subItems.map((subItem) => (
                                                     <a
                                                         key={subItem.label}
@@ -277,7 +277,7 @@ export const PremiumNavBar: React.FC<PremiumNavBarProps> = ({
                                                         {subItem.label}
                                                     </a>
                                                 ))}
-                                            </div>
+                                            </div> */}
                                         </motion.div>
                                     </div>
                                 ))}

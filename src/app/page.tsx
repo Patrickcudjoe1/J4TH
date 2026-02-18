@@ -27,8 +27,8 @@ export default function Home() {
       <HeroSection
         backgroundImageMobile={heroImageMobile.src}
         backgroundImageDesktop={heroImageDesktop.src}
-        title="JUNE FORTH"
-        subtitle="Discover premium sportswear designed for those who run their own race."
+        title="JUNE FORTH*"
+        subtitle="FAITH DRIVEN PREMIUM."
         scriptureRef="HABAKKUK 2:2"
         scriptureText="AND THE LORD ANSWERED ME AND SAID WRITE THE VISION AND MAKE IT PLAIN, THAT HE MAY RUN THAT READETH IT..."
         thumbnailImage={heroImageMobile.src}
