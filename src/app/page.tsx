@@ -4,7 +4,7 @@ import PremiumNavBar from '@/components/PremiumNavBar';
 import HeroSection from '@/components/HeroSection';
 import SplitPromo from '@/components/SplitPromo';
 import CategoryGrid from '@/components/CategoryGrid';
-import heroImageMobile from '@/assets/J4-8.png';
+import heroImageMobile from '@/assets/J4-12.jpg';
 import heroImageDesktop from '@/assets/J4-8.png';
 import promoLeftImage from '@/assets/J4-9.jpg';
 import promoRightImage from '@/assets/J4-13.jpg';
