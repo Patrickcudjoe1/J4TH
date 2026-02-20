@@ -61,37 +61,29 @@ export const HeroSection: React.FC<HeroProps> = ({
 
                 {/* Left Side - Headline */}
                 <div className="mt-20 md:mt-0 z-10 flex-1 pr-24 md:pr-0">
-                    <h1 className="text-white uppercase leading-[0.85] tracking-tighter">
-                        <div className="text-[clamp(3rem,12vw,9rem)] font-black">
-                            {firstWord}
-                        </div>
-                        {secondWord && (
-                            <div className="text-[clamp(3rem,12vw,9rem)] font-black">
-                                {secondWord}
-                            </div>
-                        )}
+                    <h1 className="text-white uppercase leading-[0.85] tracking-tighter text-[clamp(3rem,12vw,9rem)] font-black whitespace-nowrap">
+                        {firstWord} {secondWord}
                     </h1>
 
                     <p className="text-white/80 mt-6 max-w-sm text-sm md:text-base">
                         {subtitle}
                     </p>
                 </div>
-
                 {/* Mobile Scripture Card */}
                 {scriptureText && (
                     <div className="md:hidden absolute bottom-6 right-6 z-10 flex flex-col items-end gap-2 max-w-[160px]">
 
                         {/* Text Block */}
-                        <div className="text-white text-[10px] uppercase leading-relaxed text-right">
+                        {/* <div className="text-white text-[10px] uppercase leading-relaxed text-right">
                             <span className="text-[#E07E3F] font-bold">
                                 {scriptureRef}
                             </span>
                             <br />
                             {scriptureText}
-                        </div>
+                        </div> */}
 
                         {/* Thumbnail Image */}
-                        {thumbnailImage && (
+                        {/* {thumbnailImage && (
                             <div className="relative">
                                 <div className="w-28 h-36 bg-gray-900 overflow-hidden shadow-lg">
                                     <img
@@ -104,7 +96,7 @@ export const HeroSection: React.FC<HeroProps> = ({
                                     06 / 04
                                 </div>
                             </div>
-                        )}
+                        )} */}
 
                     </div>
                 )}
@@ -116,17 +108,17 @@ export const HeroSection: React.FC<HeroProps> = ({
                 {scriptureText && (
                     <div className="hidden md:flex absolute bottom-12 right-12 z-10 items-end gap-4">
 
-                        {/* Text Block */}
+                        {/* Text Block
                         <div className="text-white text-xs uppercase leading-relaxed max-w-[200px]">
                             <span className="text-[#E07E3F] font-bold">
                                 {scriptureRef}
                             </span>
                             <br />
                             {scriptureText}
-                        </div>
+                        </div> */}
 
                         {/* Desktop Thumbnail */}
-                        {thumbnailImage && (
+                        {/* {thumbnailImage && (
                             <div className="relative">
                                 <div className="w-40 h-48 bg-gray-900 overflow-hidden">
                                     <img
@@ -139,7 +131,7 @@ export const HeroSection: React.FC<HeroProps> = ({
                                     06 / 04
                                 </div>
                             </div>
-                        )}
+                        )} */}
                     </div>
                 )}
 

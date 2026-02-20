@@ -29,9 +29,9 @@ export default function Home() {
         backgroundImageDesktop={heroImageDesktop.src}
         title="JUNE FORTH*"
         subtitle="faith driven premium wear."
-        scriptureRef="HABAKKUK 2:2"
-        scriptureText="AND THE LORD ANSWERED ME AND SAID WRITE THE VISION AND MAKE IT PLAIN, THAT HE MAY RUN THAT READETH IT..."
-        thumbnailImage={heroImageMobile.src}
+      // scriptureRef="HABAKKUK 2:2"
+      // scriptureText="AND THE LORD ANSWERED ME AND SAID WRITE THE VISION AND MAKE IT PLAIN, THAT HE MAY RUN THAT READETH IT..."
+      // thumbnailImage={heroImageMobile.src}
       />
 
       {/* Split Promotional Section */}
