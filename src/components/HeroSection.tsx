@@ -59,7 +59,7 @@ export const HeroSection: React.FC<HeroProps> = ({
 
                 {/* Left Side - Headline */}
                 <div className="mt-20 md:mt-0 z-10 flex-1 pr-24 md:pr-0">
-                    <h1 className="text-white uppercase leading-[0.85] tracking-tighter text-[clamp(3rem,12vw,9rem)] font-black whitespace-nowrap">
+                    <h1 className="text-white uppercase leading-[0.85] tracking-tighter text-[clamp(4rem,12vw,9rem)] font-black whitespace-nowrap">
                         {normalizedTitle}
                     </h1>
 
