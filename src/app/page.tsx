@@ -3,14 +3,11 @@
 import PremiumNavBar from '@/components/PremiumNavBar';
 import HeroSection from '@/components/HeroSection';
 import SplitPromo from '@/components/SplitPromo';
-import CategoryGrid from '@/components/CategoryGrid';
+import ProductGrid from '@/components/ProductGrid';
 import heroImageMobile from '@/assets/J4-12.jpg';
 import heroImageDesktop from '@/assets/J4-8.png';
 import promoLeftImage from '@/assets/J4-9.jpg';
 import promoRightImage from '@/assets/J4-13.jpg';
-import categoryImage1 from '@/assets/J4-17.jpg';
-import categoryImage2 from '@/assets/J4-10.jpg';
-import categoryImage3 from '@/assets/J4-14.jpg';
 
 export default function Home() {
   return (
@@ -52,29 +49,8 @@ export default function Home() {
         }}
       />
 
-      {/* Category Grid Section */}
-      <CategoryGrid
-        categories={[
-          {
-            id: 'fruitful',
-            image: categoryImage1.src,
-            buttonText: 'Shop Fruitful',
-            onClick: () => console.log('Fruitful clicked')
-          },
-          {
-            id: 'esse',
-            image: categoryImage2.src,
-            buttonText: 'Shop Esse',
-            onClick: () => console.log('Esse clicked')
-          },
-          {
-            id: 'divine-speed',
-            image: categoryImage3.src,
-            buttonText: 'Shop Divine Speed',
-            onClick: () => console.log('Divine Speed clicked')
-          }
-        ]}
-      />
+      {/* Product Section */}
+      <ProductGrid />
 
       {/* Footer */}
       <footer className="bg-black text-white py-16 px-6 md:px-12">
