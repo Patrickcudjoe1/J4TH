@@ -52,42 +52,18 @@ export default function Home() {
       {/* Product Section */}
       <ProductGrid />
 
-      {/* Footer */}
-      <footer className="bg-black text-white py-16 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 mb-8">
-          <div>
-            <h3 className="font-bold text-lg mb-4">J4TH</h3>
-            <p className="text-sm text-gray-400">Premium sportswear and lifestyle products.</p>
+      {/* Compact Footer (white background, black text) */}
+      <footer className="bg-white text-black py-3 px-6">
+        <div className="max-w-7xl mx-auto flex items-center justify-between text-sm">
+          <div className="flex gap-4 text-gray-600">
+            <a href="#" className="hover:text-black transition">Instagram</a>
+            <a href="#" className="hover:text-black transition">Twitter</a>
           </div>
-          <div>
-            <h4 className="font-semibold mb-4 text-sm">SHOP</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="#" className="hover:text-white transition">All Products</a></li>
-              <li><a href="#" className="hover:text-white transition">New Arrivals</a></li>
-              <li><a href="#" className="hover:text-white transition">Collections</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold mb-4 text-sm">SUPPORT</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="#" className="hover:text-white transition">Contact Us</a></li>
-              <li><a href="#" className="hover:text-white transition">FAQ</a></li>
-              <li><a href="#" className="hover:text-white transition">Returns</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold mb-4 text-sm">LEGAL</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="#" className="hover:text-white transition">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-white transition">Terms of Service</a></li>
-            </ul>
-          </div>
-        </div>
-        <div className="border-t border-gray-800 pt-8 flex justify-between items-center text-sm text-gray-500">
-          <p>&copy; 2026 J4TH. All rights reserved.</p>
-          <div className="flex gap-4">
-            <a href="#" className="hover:text-white transition">Instagram</a>
-            <a href="#" className="hover:text-white transition">Twitter</a>
+
+          <div className="flex items-center gap-4 text-gray-600">
+            <span>&copy; 2026</span>
+            <a href="#" className="hover:text-black transition">Privacy</a>
+            <a href="#" className="hover:text-black transition">Terms</a>
           </div>
         </div>
       </footer>

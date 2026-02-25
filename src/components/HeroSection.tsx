@@ -27,10 +27,8 @@ export const HeroSection: React.FC<HeroProps> = ({
     const mobileImage = backgroundImageMobile || backgroundImage;
     const desktopImage = backgroundImageDesktop || backgroundImage;
 
-    // Safer title split (prevents crash if only one word)
-    const titleParts = title.split(' ');
-    const firstWord = titleParts[0];
-    const secondWord = titleParts[1] || '';
+    // Keep the title intact and normalize whitespace
+    const normalizedTitle = title.replace(/\s+/g, ' ').trim();
 
     return (
         <div className="h-screen w-full overflow-hidden relative flex-shrink-0">
@@ -61,8 +59,8 @@ export const HeroSection: React.FC<HeroProps> = ({
 
                 {/* Left Side - Headline */}
                 <div className="mt-20 md:mt-0 z-10 flex-1 pr-24 md:pr-0">
-                    <h1 className="text-white uppercase leading-[0.85] tracking-tighter text-[clamp(3rem,12vw,9rem)] font-black whitespace-nowrap">
-                        {firstWord} {secondWord}
+                    <h1 className="text-black uppercase leading-[0.85] tracking-tighter text-[clamp(3rem,12vw,9rem)] font-black whitespace-nowrap">
+                        {normalizedTitle}
                     </h1>
 
                     <p className="text-white/80 mt-6 max-w-sm text-sm md:text-base">
