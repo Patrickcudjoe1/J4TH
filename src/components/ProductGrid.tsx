@@ -57,19 +57,17 @@ const ProductGrid: React.FC = () => {
                 className={`grid gap-4 md:gap-6 px-4 md:px-8 transition-all duration-300 ease-in-out ${getGridClasses()}`}
             >
                 {products.map((product) => (
-                    <Link key={product.id} href={`/product/${product.id}`} className="group cursor-pointer">
-                        <a className="block">
-                            <div className="relative overflow-hidden bg-gray-100 aspect-[3/4]">
-                                <img
-                                    src={product.image}
-                                    alt={product.code}
-                                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                                />
-                            </div>
-                            <p className="text-center text-xs uppercase tracking-wider text-gray-800 mt-2 font-light">
-                                {product.code}
-                            </p>
-                        </a>
+                    <Link key={product.id} href={`/product/${product.id}`} className="group cursor-pointer block">
+                        <div className="relative overflow-hidden bg-gray-100 aspect-[3/4]">
+                            <img
+                                src={product.image}
+                                alt={product.code}
+                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                            />
+                        </div>
+                        <p className="text-center text-xs uppercase tracking-wider text-gray-800 mt-2 font-light">
+                            {product.code}
+                        </p>
                     </Link>
                 ))}
             </div>
