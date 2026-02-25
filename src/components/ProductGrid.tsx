@@ -37,7 +37,7 @@ const ProductGrid: React.FC = () => {
     };
 
     return (
-        <section className="w-full bg-white py-8 md:py-12">
+        <section className="w-full bg-white py-4 md:py-6">
             {/* Header with Zoom Button */}
             <div className="flex items-center justify-between px-4 md:px-8 mb-6">
                 <button
