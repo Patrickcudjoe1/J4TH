@@ -13,7 +13,7 @@ interface PremiumNavBarProps {
 }
 
 export const PremiumNavBar: React.FC<PremiumNavBarProps> = ({
-    logo = 'J4TH',
+    logo = '46',
     onSearchClick,
     onAccountClick,
     onCartClick,

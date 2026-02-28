@@ -5,7 +5,7 @@ import HeroSection from '@/components/HeroSection';
 import SplitPromo from '@/components/SplitPromo';
 import ProductGrid from '@/components/ProductGrid';
 import heroImageMobile from '@/assets/J4-19.png';
-import heroImageDesktop from '@/assets/J4-8.png';
+import heroImageDesktop from '@/assets/J4-19.png';
 import promoLeftImage from '@/assets/J4-9.jpg';
 import promoRightImage from '@/assets/J4-13.jpg';
 
@@ -25,7 +25,7 @@ export default function Home() {
         backgroundImageMobile={heroImageMobile.src}
         backgroundImageDesktop={heroImageDesktop.src}
         title="JUNE FORTH*"
-        subtitle="faith driven premium wear."
+        subtitle="Young at Heart With a Vision."
       // scriptureRef="HABAKKUK 2:2"
       // scriptureText="AND THE LORD ANSWERED ME AND SAID WRITE THE VISION AND MAKE IT PLAIN, THAT HE MAY RUN THAT READETH IT..."
       // thumbnailImage={heroImageMobile.src}
